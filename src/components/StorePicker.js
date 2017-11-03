@@ -11,9 +11,9 @@ class StorePicker extends React.Component {
 	goToStore(event) {
 		event.preventDefault();
 		console.log("You submitted the form!!!!!")
-		console.log(this.storeInput.value);
+		//first grab the text from the box
 		const storeId = this.storeInput.value
-		console.log(`Going to ${storeId}`);
+		//secton we are going to transition from / to /store/:storeId
 		this.context.router.transitionTo(`/store/${storeId}`);
 	}
 	render() {
